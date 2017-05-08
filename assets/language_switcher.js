@@ -6,9 +6,13 @@
  */
 (function($) {
 	$(function() {
+		$('#version').prepend(
+			$('<ul />')
+				.addClass('backend-language-switcher')
+		);
 		for (var i in Symphony.Languages) {
 			var lang = Symphony.Languages[i];
-			$('nav#nav ul.structure').append(
+			$('#session ul.backend-language-switcher').append(
 				// Nav menu item
 				$('<li />')
 					.addClass('backend_language_switcher')
@@ -50,6 +54,6 @@
 					})
 			);
 		}
-			
+
 	});
 })(jQuery);

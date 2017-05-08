@@ -4,13 +4,25 @@
  * @author John J. Camilleri
  * @version 0.1
  */
-#nav li.backend_language_switcher {
-	/*padding: 10px 7px;
-	height: 10px;
-	background: url("/symphony/assets/images/navigation.png") repeat-x scroll 0 -65px;*/
-	cursor:pointer;
+
+.backend-language-switcher {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
-#nav li.backend_language_switcher.first { margin-left: 30px; }
-#nav li.backend_language_switcher.selected { background-position: 0 -30px; }
-#nav li.backend_language_switcher:hover { background-position: 0 0; }
-#nav li.backend_language_switcher img { }
+
+.backend-language-switcher li {
+	transition: opacity 0.45s;
+	opacity: 0.25;
+	cursor: pointer;
+}
+
+.backend-language-switcher li.selected,
+.backend-language-switcher li:hover {
+	opacity: 1;
+}
+
+.backend-language-switcher li + li {
+	margin-left: 1rem;
+}
