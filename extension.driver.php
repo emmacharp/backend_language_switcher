@@ -6,7 +6,7 @@
  * @version 1.2.1
  */
 Class extension_backend_language_switcher extends Extension{
-	
+
 	public function getSubscribedDelegates(){
 		return array(
 			array(
@@ -16,7 +16,7 @@ Class extension_backend_language_switcher extends Extension{
 			),
 		);
 	}
-	
+
 	private $LOAD_NUMBER = 955935299;
 
 	public function initializeAdmin($context) {
@@ -28,14 +28,15 @@ Class extension_backend_language_switcher extends Extension{
 		} else {
 			$author = Administration::instance()->Author;
 		}
-		
-		//frontend localization
-		$codes = Symphony::Configuration()->get('langs', 'frontend_localisation');
-		//language redirect cases
-		if ($codes == '' || $codes == null) $codes = Symphony::Configuration()->get('language_codes', 'language_redirect');
-		if ($codes == '' || $codes == null) $codes = Symphony::Configuration()->get('languages', 'language_redirect');
-		$languages = array_filter(array_map('trim',explode(',', $codes )));
-		
+
+		//Get Available Languages
+		$codes = Lang::getAvailableLanguages();
+		$languages = array();
+
+		foreach ($codes as $code => $lang) {
+			$languages[] = $code;
+		}
+
 		// CSS & JS for all admin
 		$page->addStylesheetToHead($assets_path . '/language_switcher.css', 'all', $LOAD_NUMBER++);
 		$script = new XMLElement('script');
@@ -66,7 +67,7 @@ Class extension_backend_language_switcher extends Extension{
 		$page->addElementToHead($script, $this->LOAD_NUMBER++);
 		$page->addScriptToHead($assets_path . '/language_switcher.js', $this->LOAD_NUMBER++);
 	}
-	
+
 	public function enable() {
 		return $this->install();
 	}
