@@ -14,7 +14,7 @@
 
 .backend-language-switcher li {
 	transition: opacity 0.45s;
-	opacity: 0.25;
+	opacity: 0.5;
 	cursor: pointer;
 }
 
