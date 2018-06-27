@@ -25,13 +25,7 @@
 						'lang':lang
 					})
 					// Flag image
-					.append(
-						$('<img />')
-							.attr({
-								'src':Symphony.Context.get('root')+'/extensions/backend_language_switcher/assets/flags/'+lang+'.png',
-								'alt':lang.toUpperCase()
-							})
-					)
+					.text(lang)
 					// Click handler - Construct request to change user language
 					.click(function(){
 						var li = $(this);

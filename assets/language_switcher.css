@@ -13,16 +13,20 @@
 }
 
 .backend-language-switcher li {
-	transition: opacity 0.45s;
-	opacity: 0.5;
+	border-radius: 5px;
+	transition: background-color 0.45s;
+	color: #ffffff;
+	font-size: 1.0rem;
+	padding: 0.25rem 0.75rem;
+	background-color: #d3dce2;
 	cursor: pointer;
 }
 
 .backend-language-switcher li.selected,
 .backend-language-switcher li:hover {
-	opacity: 1;
+	background-color: #2f77eb;
 }
 
 .backend-language-switcher li + li {
-	margin-left: 1rem;
+	margin-left: 0.5rem;
 }
