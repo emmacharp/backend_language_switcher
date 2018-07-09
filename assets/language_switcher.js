@@ -6,8 +6,8 @@
  */
 (function($) {
 	$(function() {
-		$('#session ul').prepend(
-			$('<li class="backend-language-switcher-ctn"><span>Language: </span><ul class="backend-language-switcher" /></li>')
+		$('#session > ul > li:first-child').after(
+			$('<li class="backend-language-switcher-ctn"><span>Language</span><ul class="backend-language-switcher" /></li>')
 		);
 		for (var i in Symphony.Languages) {
 			var lang = Symphony.Languages[i];

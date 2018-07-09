@@ -9,6 +9,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: baseline;
+	justify-content: space-between;
 	padding: 1rem 1.5rem;
 }
 
@@ -25,7 +26,7 @@
 }
 
 .backend-language-switcher li {
-	transition: color 0.45s;
+	transition: color 0.2s;
 	color: currentColor;
 	font-size: 1.0rem;
 	text-transform: uppercase;
