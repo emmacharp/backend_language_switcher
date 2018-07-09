@@ -5,26 +5,36 @@
  * @version 0.1
  */
 
+.backend-language-switcher-ctn {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	padding: 1rem 1.5rem;
+}
+
+.backend-language-switcher-ctn > span {
+	padding-right: 1rem;
+}
+
 .backend-language-switcher {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+	align-items: baseline;
+	margin: 0;
+	padding: 0;
 }
 
 .backend-language-switcher li {
-	border-radius: 5px;
-	transition: background-color 0.45s;
-	color: #ffffff;
+	transition: color 0.45s;
+	color: currentColor;
 	font-size: 1.0rem;
-	padding: 0.25rem 0.75rem;
-	background-color: #d3dce2;
+	text-transform: uppercase;
 	cursor: pointer;
 }
 
 .backend-language-switcher li.selected,
 .backend-language-switcher li:hover {
-	background-color: #2f77eb;
+	color: #2f77eb;
 }
 
 .backend-language-switcher li + li {
