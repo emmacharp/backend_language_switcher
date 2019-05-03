@@ -2,43 +2,32 @@
  * Backend language switcher
  *
  * @author John J. Camilleri
- * @version 0.1
+ * @version 1.0.0
  */
-
-.backend-language-switcher-ctn {
-	display: flex;
-	flex-direction: row;
-	align-items: baseline;
-	justify-content: space-between;
-	padding: 1rem 1.5rem;
-	cursor: auto;
-}
-
-.backend-language-switcher-ctn > span {
-	padding-right: 1rem;
-}
-
 .backend-language-switcher {
+	padding: var(--spacing-smallerish);
+	border-bottom: 1px solid var(--color-main-lightest);
 	display: flex;
-	flex-direction: row;
-	align-items: baseline;
-	margin: 0;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.backend-language-switcher svg {
+	width: var(--spacing-smallerish);
+	height: var(--spacing-smallerish);
+	margin-right: var(--spacing-smallerish);
+}
+
+.backend-language-switcher button {
 	padding: 0;
+	background-color: transparent;
+	color: var(--color-main);
+	margin-right: 2rem;
+	font-size: var(--text-current);
+	line-height: 1em;
+	font-weight: 500;
 }
 
-.backend-language-switcher li {
-	transition: color 0.2s;
-	color: currentColor;
-	font-size: 1.0rem;
-	text-transform: uppercase;
-	cursor: pointer;
-}
-
-.backend-language-switcher li.selected,
-.backend-language-switcher li:hover {
-	color: #2f77eb;
-}
-
-.backend-language-switcher li + li {
-	margin-left: 0.5rem;
+.backend-language-switcher button:hover {
+	color: var(--color-accent);
 }
