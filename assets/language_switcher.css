@@ -6,7 +6,7 @@
  */
 .backend-language-switcher {
 	padding: var(--spacing-smallerish);
-	border-bottom: 1px solid var(--color-main-lightest);
+	border-bottom: 1px solid var(--color-main-lighter);
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
